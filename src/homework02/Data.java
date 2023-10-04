@@ -10,7 +10,8 @@ public class Data {
          */
         int totalOfLetters = 53;
         int lettersSent = 24;
-        System.out.println("Осталось отправить " + (totalOfLetters-lettersSent) + " писем" );
+        int remainLetters =totalOfLetters-lettersSent;
+        System.out.println("Осталось отправить " + remainLetters + " писем" );
 
         /*
             Объявить и инициализировать переменные для хранения времени (в часах) и
@@ -18,9 +19,9 @@ public class Data {
          Найти и вывести в консоль скорость, выраженную в метрах в секунду.
          */
         int timeInHours = 8;
-        int distInKilometers = 57;
-        double speed = (double) distInKilometers /timeInHours;
-        System.out.println("Скорость равна " + speed + " километров в час");
+        double distInKilometers = 56;
+        double speed = (distInKilometers /timeInHours)*1000 / 3600;
+        System.out.println("Скорость равна " + speed + " метров в секунду");
         /*
           Найти сумму цифр целого положительного двузначного числа.
          Результат вывести в консоль.
@@ -28,17 +29,17 @@ public class Data {
         int number = 46;
         int firstPartOfNumber = number / 10;
         int secondPartOfNumber = number%10;
-        System.out.println("Сумма цифр числа равна " + (firstPartOfNumber+secondPartOfNumber));
+        int sum = firstPartOfNumber+secondPartOfNumber;
+        System.out.println("Сумма цифр числа равна " + sum);
         /*
         Поменять значения 2х переменных местами, используя арифметические операторы.
         Результат вывести в консоль.
          */
         int a = 5;
         int b = 12;
-        int temp;
-        temp = a;
-        a = b;
-        b = temp;
+        int temp = a * b;
+        a = temp/a;
+        b = temp/b;
         System.out.println("a = " + a);
         System.out.println("b = " + b);
     }
