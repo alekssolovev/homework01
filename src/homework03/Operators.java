@@ -86,13 +86,10 @@ public class Operators {
         int couponNumber = 5555; double resultSum = 5000;
         switch (couponNumber)
         {
-            case 1111 -> { resultSum =resultSum*0.9;
-                System.out.println("Итоговая сумма "+resultSum);}
-            case 3333 ->{ resultSum = 5000*0.8;
-                System.out.println("Итоговая сумма "+ resultSum);}
-            case 5555 -> {resultSum = 5000*0.7;
-                System.out.println("Итоговая сумма "+ resultSum);}
-            default -> System.out.println("Итоговая сумма "+ resultSum);
+            case 1111 -> resultSum =resultSum*0.9;
+            case 3333 ->resultSum = 5000*0.8;
+            case 5555 -> resultSum = 5000*0.7;
+            default ->  resultSum=5000*1;
         }
 
     }
