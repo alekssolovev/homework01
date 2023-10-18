@@ -23,6 +23,10 @@ public class Author {
 
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
     // методы
     // void - метод выполняет инструкции, но ничего не возвращает
     public void printInfo() {

@@ -37,14 +37,13 @@ public class Cat {
 
     }
 
-    public boolean attack(Cat cat, Cat cat1) {
-        if (cat1 == null && cat == null)
-            throw new IllegalArgumentException("NULL!");
+    public boolean attack(Cat cat) {
+        if (cat == null) ;
         boolean ifVictory = false;
-        if (cat.weight > cat1.weight) {
-            cat1.numbersOfVictory++;
+        if (cat.weight > this.weight) {
+            cat.numbersOfVictory++;
             ifVictory = true;
-        } else cat.numbersOfVictory++;
+        } else this.numbersOfVictory++;
         System.out.println(ifVictory);
         return ifVictory;
 

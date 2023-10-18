@@ -1,6 +1,7 @@
 package homework07.com.company.project.lesson07;
 
 import java.lang.Object;
+import java.util.Arrays;
 
 public class Book {
     // модификатор private - свойство, конструктор, метод доступны только в текущем классе
@@ -8,7 +9,8 @@ public class Book {
     private boolean isPublished; // // значение по умолчанию false (для типа boolean)
     // хранит ссылки на нескольких авторов
     private Author[] authors;
-    Author value = new Author(1);//значение по умолчанию
+    private int count = 0;
+
 
     // ПКМ -> Generate -> Constructor
     // numberOfAuthors - размер массива authors
@@ -16,14 +18,13 @@ public class Book {
     public Book(String name, int numberOfAuthors) {
         if (numberOfAuthors < 0 || numberOfAuthors >= 5)
             throw new IllegalArgumentException("количество авторов должно быть от 1 до 4");
-
-        // Устанавливаем значение по умолчанию
         authors = new Author[numberOfAuthors];
-        for (int i = 0; i < authors.length; i++) {
-            authors[i] = value;
-        }
+        // Устанавливаем значение по умолчанию
+
         setName(name); // вызов метода внутри класса
+
     }
+
 
     // ПКМ -> Generate -> Setter
     public void setName(String name) { // Setter
@@ -40,24 +41,23 @@ public class Book {
     }
     // ПКМ -> Generate -> Setter and Getter
 
-    int count = 0;
 
     // метод добавления нового автора в массив authors
     public void addAddAuthor(Author author) {
 
         if (count > authors.length)
-            throw new IllegalArgumentException("много");
-        if (author == null)
-            throw new IllegalArgumentException("name not null"); // author не может быть null ссылкой
+            throw new IllegalArgumentException("more");
         for (var i = 0; i < authors.length; i++) {
-            if (authors[i].equals(value)) {
+            if (authors[i] == null) {
                 authors[i] = author;
-            } else if (authors[i].equals(author))
-                System.out.println("автор есть");
+                return;
+            }
         }
-        count++;
         System.out.println(count);
+        count++;
+        System.out.println(Arrays.toString(authors));
     }
+
 }
 // новые авторы не должны перезаписывать уже существующих в массиве
 
