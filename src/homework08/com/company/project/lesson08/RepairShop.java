@@ -11,6 +11,7 @@ public class RepairShop {
 
     private Vehicle[] vehicles = new Vehicle[amountOfVehicles];
 
+
     Random random = new Random();
 
     public void addToVehicles(Vehicle vehicle) {
@@ -37,7 +38,7 @@ public class RepairShop {
             }
             if (vehicle instanceof Car car) {
                 int randomNumber = random.nextInt(4);
-                car.setColour(colours[randomNumber]);
+                car.changeColour(colours[randomNumber]);
             }
             vehicle.repair();
 

@@ -1,6 +1,6 @@
 package homework08.com.company.project.lesson08;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class MainClass {
     public static void main(String[] args) {
@@ -26,6 +26,8 @@ public class MainClass {
         repairShop.addToVehicles(car);
         //repairShop.addToVehicles(car);
         repairShop.repairAll();
+       /* scooter.changeColour(scooter.colour);
+        scooter.recoveryColour();*/
 
 
     }
