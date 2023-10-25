@@ -19,4 +19,16 @@ public enum PlanetOfSolarSys {
         this.mass = mass;
         this.radius = radius;
     }
+
+    public double getMass() {
+        return mass;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
 }
